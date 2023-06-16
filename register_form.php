@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
 
 
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $select = " SELECT * FROM user_form1 WHERE email = '$email' && password = '$pass' ";
    $result = mysqli_query($conn, $select);
 
 
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
       }elseif(strlen($_POST['password'])>16){
          $error[] = 'password must be 15 characters or less';
       }else{
-            $insert = "INSERT INTO user_form(name, email, password) VALUES('$name','$email','$pass')";
+            $insert = "INSERT INTO user_form1 (name, email, password) VALUES('$name','$email','$pass')";
             $_SESSION['insert'] =$insert;
             $otp = rand(100000,999999);
             $_SESSION['otp'] = $otp;

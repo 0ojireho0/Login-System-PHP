@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
    
 
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $select = " SELECT * FROM user_form1 WHERE email = '$email' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
